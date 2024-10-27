@@ -1,16 +1,16 @@
 
-import { Button } from '@/components/ui/button';
-import { useScreenSize } from '../hooks/mobile-section'
+import { Header } from "@/componets/header";
+import { Movies } from "@/componets/movies";
+import { Navbar } from "@/componets/navbar";
+//import SwiperComponent from "@/componets/swiper";
 
-function Home() {
-  const {isMobile} = useScreenSize()
-  console.log(isMobile.valueOf());
-  
-  return (
-    <div className=''>
-      <Button>Check</Button>
+export default function Home() {
+  return  (
+    <div>
+      <Header/>
+    <Navbar>
+      <Movies/>
+    </Navbar>
     </div>
-  )
+  );
 }
-
-export default Home
