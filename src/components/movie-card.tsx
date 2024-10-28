@@ -1,5 +1,5 @@
 
-import { Movie } from "@/componets/movies"
+import { Movie } from "@/components/movies"
 
 type MovieCardProps = {
     movie: Movie
@@ -14,10 +14,10 @@ export const MovieCard = ({movie}: MovieCardProps) => {
                 <img 
                     src={movie.Poster} 
                     alt={movie.Title}
-                    className="w-full h-[240px] sm:h-[360px] md:h-[450px] object-cover"/>
+                    className="w-full h-[240px] sm:h-[360px] md:h-[370px] object-cover"/>
             </div>
-            <div className="p-2">
-                <h2 className="text-black text-sm sm:text-base md:text-lg font-semibold line-clamp-2">
+            <div className="p-1">
+                <h2 className="text-black text-base sm:text-base md:text-lg font-semibold line-clamp-2">
                     {movie.Title}
                 </h2>
                 <p className="text-gray-600 text-xs sm:text-sm md:text-base">{movie.Year}</p>

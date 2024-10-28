@@ -1,18 +1,18 @@
 
-import { Header } from "@/componets/header";
-import { Movies } from "@/componets/movies";
-import { Navbar } from "@/componets/navbar";
+import { CarouselComponent } from "@/components/carousel";
+import { Header } from "@/components/header";
+import { Movies } from "@/components/movies";
+import { Navbar } from "@/components/navbar";
 
 
 export default function Home() {
   return  (
     <div>
       <Header/>
-       <Navbar>
-       {/*  <SwiperComponent/> */} 
-       {/*  <Carousel/> */}
-      <Movies/>
-    </Navbar>
+          <Navbar>
+          <CarouselComponent/>
+          <Movies/>
+        </Navbar>
     </div>
   );
 }
