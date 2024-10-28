@@ -1,4 +1,3 @@
-
 import { useScreenSize } from "@/hooks/mobile-section"
 import HomeIcon from "@/assets/redshow-icon.png"
 import MovieIcon from "@/assets/streams-icon.png"

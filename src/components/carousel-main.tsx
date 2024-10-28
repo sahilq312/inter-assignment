@@ -57,7 +57,7 @@ export const Carousel = () => {
             <img
               src={CarouselImages[currentIndex].image}
               alt={CarouselImages[currentIndex].alt}
-              className="w-full h-full object-cover transition-all p-2 rounded-2xl duration-1000"
+              className="w-full min-h-[35vh] object-cover transition-all p-2 rounded-2xl duration-1000"
             />
           </div>
         </section>
