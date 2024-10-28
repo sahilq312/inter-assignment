@@ -1,6 +1,6 @@
 import BookMyShowSVG from "@/components/bookmyshow-svg";
 import { Input } from "@/components/ui/input";
-import { useScreenSize } from "@/hooks/mobile-section";
+import { useScreenSize } from "@/hooks/screensize-context";
 import { ChevronDown, ChevronRight, Menu, Search } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -10,6 +10,7 @@ interface MovieData {
     Rated: string;
     Released: string;
     Runtime: string;
+    Poster : string;
     Genre: string;
     Plot: string;
     Type: string;
@@ -97,7 +98,10 @@ export const Header = () => {
                 <div className="absolute top-20 left-1/2 transform -translate-x-1/2 mt-4 z-10 bg-white shadow-xl w-full max-w-2xl p-6 rounded-lg border border-gray-200 transition-all duration-300">
                     {movieData.Response === "True" ? (
                         <div>
-                            <h2 className="text-lg font-semibold text-gray-800">{movieData.Title}</h2>
+                            <div className="flex items-center gap-4">
+                                <img src={movieData.Poster} className="w-10 h-10"/>
+                                <h2 className="text-lg font-semibold text-gray-800">{movieData.Title}</h2>
+                            </div>
                             <p className="text-gray-600">Year: {movieData.Year}</p>
                             <p className="text-gray-600">Genre: {movieData.Genre}</p>
                             <p className="text-gray-600">Plot: {movieData.Plot}</p>

@@ -1,4 +1,4 @@
-import { useScreenSize } from "@/hooks/mobile-section";
+import { useScreenSize } from "@/hooks/screensize-context";
 import { Carousel } from "./carousel-main";
 import { CarouselPhone } from "./carousel-phone";
 

@@ -1,9 +1,10 @@
-import { useScreenSize } from "@/hooks/mobile-section"
+
 import HomeIcon from "@/assets/redshow-icon.png"
 import MovieIcon from "@/assets/streams-icon.png"
 import LiveEventsIcon from "@/assets/liveevents-icon.png"
 import ProfileIcon from "@/assets/profile-icon.png"
-import { useSelectionContext } from "@/hooks/select-option-context"
+import { useScreenSize } from "@/hooks/screensize-context"
+import { useSelectionContext } from "@/hooks/selection-context"
 interface NavbarProp {
     children : React.ReactNode
 }

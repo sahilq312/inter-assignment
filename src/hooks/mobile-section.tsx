@@ -1,17 +1,12 @@
-import React, { createContext, useState, useEffect, ReactNode } from 'react';
-
-interface ScreenSizeContextProps {
-  isMobile: boolean;
-}
-
-const ScreenSizeContext = createContext<ScreenSizeContextProps | undefined>(undefined);
+import { useState, useEffect, ReactNode } from 'react';
+import { ScreenSizeContext } from './screensize-context';
 
 interface ScreenSizeProviderProps {
   children: ReactNode;
 }
 
 export const ScreenSizeProvider = ({ children }: ScreenSizeProviderProps) => {
-  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(() => window.innerWidth <= 768);
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 768);
@@ -33,13 +28,3 @@ export const ScreenSizeProvider = ({ children }: ScreenSizeProviderProps) => {
     </ScreenSizeContext.Provider>
   );
 };
-
-export const useScreenSize = (): ScreenSizeContextProps => {
-  const context = React.useContext(ScreenSizeContext);
-  if (!context) {
-    throw new Error('useScreenSize must be used within a ScreenSizeProvider');
-  }
-  return context;
-};
-
-export default ScreenSizeContext;

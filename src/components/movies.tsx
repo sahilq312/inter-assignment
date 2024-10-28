@@ -1,4 +1,4 @@
-import { useSelectionContext } from "@/hooks/select-option-context"
+import { useSelectionContext } from "@/hooks/selection-context"
 import { useEffect, useState } from "react"
 import { fetchEvents, fetchMovies, fetchStream } from "@/lib/fetch"
 import { ChevronLeft, ChevronRight } from "lucide-react"
