@@ -1,35 +1,27 @@
-import { Card } from "@/components/ui/card"
 
-type CardProps = {
-    title: string
-    year: string
-    imdbID: string
-    type: string
-    poster: string
-}
+import { Movie } from "@/componets/movies"
+
 type MovieCardProps = {
-    movie: CardProps
+    movie: Movie
 }   
 
 export const MovieCard = ({movie}: MovieCardProps) => {
     return (
-        <Card className="w-36 h-48 rounded-md">
-            <div className="w-full h-full">
-                <img src={movie.poster} alt={movie.title} className="w-full h-full object-cover"/>
+        <div 
+           className="flex-none w-[160px] sm:w-[200px] md:w-[240px] border"
+        >
+            <div className=" overflow-hidden rounded-lg shadow-lg transition-transform duration-300 group-hover/card:scale-105">
+                <img 
+                    src={movie.Poster} 
+                    alt={movie.Title}
+                    className="w-full h-[240px] sm:h-[360px] md:h-[450px] object-cover"/>
             </div>
-            <div className="flex flex-col gap-1">
-                <p className="text-sm font-medium">{movie.title}</p>
-                <p className="text-xs text-gray-500">{movie.year}</p>
+            <div className="p-2">
+                <h2 className="text-black text-sm sm:text-base md:text-lg font-semibold line-clamp-2">
+                    {movie.Title}
+                </h2>
+                <p className="text-gray-600 text-xs sm:text-sm md:text-base">{movie.Year}</p>
             </div>
-        </Card>
+        </div>
     )
 }
-/* 
-{
-      "Title": "Mia and Me",
-      "Year": "2012–2023",
-      "imdbID": "tt2203143",
-      "Type": "series",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BNmNmMTI0NTItYjg2ZC00ZGM3LTlkNzctNGVjYjJlNTNmNWFhXkEyXkFqcGc@._V1_SX300.jpg"
-    },
-     */

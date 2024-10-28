@@ -23,7 +23,7 @@ export const Header = () => {
              </header>) :
              (<header className="flex justify-evenly gap-4 items-center w-full">
                 <div className="flex justify-center items-center">
-                <BookMyShowSVG className="w-48"/>
+                <BookMyShowSVG className="w-56"/>
                 <Input type="text" placeholder="Search for movies, events, plays, sports and more" className="w-[600px] h-10"/>
                 </div>
                 <div className="flex gap-4 justify-center items-center ">
