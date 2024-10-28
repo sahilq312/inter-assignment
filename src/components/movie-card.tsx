@@ -8,7 +8,7 @@ type MovieCardProps = {
 export const MovieCard = ({movie}: MovieCardProps) => {
     return (
         <div 
-           className="flex-none w-[160px] sm:w-[200px] md:w-[240px] border"
+           className="flex-none w-[160px] sm:w-[200px] md:w-[240px]"
         >
             <div className=" overflow-hidden rounded-lg shadow-lg transition-transform duration-300 group-hover/card:scale-105">
                 <img 

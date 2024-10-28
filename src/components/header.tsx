@@ -21,9 +21,9 @@ export const Header = () => {
                     <Search size={20} className="text-gray-500 "/>
                 </div>
              </header>) :
-             (<header className="flex justify-evenly gap-4 items-center w-full">
+             (<header className="flex justify-evenly gap-4 items-center h-20 w-full">
                 <div className="flex justify-center items-center">
-                <BookMyShowSVG className="w-56"/>
+                <BookMyShowSVG className="w-64 h-10"/>
                 <Input type="text" placeholder="Search for movies, events, plays, sports and more" className="w-[600px] h-10"/>
                 </div>
                 <div className="flex gap-4 justify-center items-center ">
